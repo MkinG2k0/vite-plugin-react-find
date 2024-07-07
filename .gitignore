@@ -6,3 +6,7 @@
 dist
 node_modules
 
+.idea
+pnpm-lock.yaml
+.env
+

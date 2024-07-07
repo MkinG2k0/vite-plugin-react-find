@@ -1,14 +1,10 @@
 import React from 'react'
 import reactDOM from 'react-dom'
-import Toggle from './Toggle/Toggle'
+import Select from './Select/select.jsx'
 
 const divEle = document.createElement('div')
 divEle.id = 'react-inspector-container'
-divEle.style.position = 'fixed'
-divEle.style.top = '40px'
-divEle.style.right = '100px'
-divEle.style.backgroundColor = '#ccc'
-divEle.style.zIndex = '9999'
+
 document.body.appendChild(divEle)
 
 const domContainer = document.querySelector('#react-inspector-container')
@@ -17,5 +13,5 @@ const domContainer = document.querySelector('#react-inspector-container')
 const error = console.error
 console.error = () => { }
 // react version compatible
-reactDOM.render(<Toggle />, domContainer)
+reactDOM.render(<Select />, domContainer)
 console.error = error
