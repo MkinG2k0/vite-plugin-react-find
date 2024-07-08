@@ -25,7 +25,7 @@ function App() {
           <Hello/>
           <Hello/>
           <ReactInspector/>
-
+          <a href="https://github.com/sudongyuer/vite-plugin-react-inspector" target="_blank" rel="noreferrer">https://github.com/sudongyuer/vite-plugin-react-inspector</a>
           <ReactInspector/>
           <ReactInspector/>
           <ReactInspector/>
