@@ -1,9 +1,11 @@
-## 👀 Why 
+## 👀 Why
 When developing a React app, you have a lot of components in your app. Sometimes you may forget where the code is located that you want to edit. Then you need this plugin to help you find the code, just click the dom in the browser and this plugin can help you to open the editor and find the code.
 
 
 ## 📖 Introduction
 This website plugin allows users to navigate to the local IDE code directly from the React browser component with the "Controleft" key pressed (by default) and a mouse click, which is similar to Chrome inspector, but more advanced.
+
+![](./packages/vite-plugin-react-find/docs/react-plugin-find.gif)
 
 ## 🌈 Features
 
@@ -61,16 +63,16 @@ For example, if you want it always open VSCode when inspection clicked, set `exp
 
 - install VSCode command line tools, [see the official docs](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
 
-- set env to shell, like `.bashrc` or `.zshrc`  
+- set env to shell, like `.bashrc` or `.zshrc`
 
   ```bash
   export REACT_EDITOR=code
   ```
 
 
-### WebStorm  
+### WebStorm
 
-- just set env with an absolute path to shell, like `.bashrc` or `.zshrc` (only MacOS)  
+- just set env with an absolute path to shell, like `.bashrc` or `.zshrc` (only MacOS)
 
   ```bash
   export REACT_EDITOR='/Applications/WebStorm.app/Contents/MacOS/webstorm'
@@ -80,7 +82,7 @@ For example, if you want it always open VSCode when inspection clicked, set `exp
 
 - install WebStorm command line tools
 
-- then set env to shell, like `.bashrc` or `.zshrc`  
+- then set env to shell, like `.bashrc` or `.zshrc`
 
   ```bash
   export REACT_EDITOR=webstorm

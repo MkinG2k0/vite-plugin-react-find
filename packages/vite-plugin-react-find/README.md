@@ -5,6 +5,8 @@ When developing a React app, you have a lot of components in your app. Sometimes
 ## 📖 Introduction
 This website plugin allows users to navigate to the local IDE code directly from the React browser component with the "Controleft" key pressed (by default) and a mouse click, which is similar to Chrome inspector, but more advanced.
 
+![](./docs/react-plugin-find.gif)
+
 ## 🌈 Features
 
 - Support react 16
