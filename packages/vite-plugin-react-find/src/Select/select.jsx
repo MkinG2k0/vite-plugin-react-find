@@ -11,6 +11,7 @@ function Select() {
 
   const eventCallBack = useCallback((e) => {
     e.preventDefault()
+    setActive(false)
     const filePath = e.target.getAttribute('data-react-inspector')
     const SERVER_URL = '/__react-inspector-launch-editor'
     const fetchUrl = `${SERVER_URL}?file=${filePath}`

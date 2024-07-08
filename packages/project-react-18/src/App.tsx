@@ -9,6 +9,7 @@ function App() {
       <React.Fragment>
 
         <header className="App-header">
+          <button onClick={() => { console.log('click') }}>butttt</button>
           <p>vite-plugin-react-inspector</p>
           <p>vite-plugin-react-inspector</p>
           <p>vite-plugin-react-inspector</p>
