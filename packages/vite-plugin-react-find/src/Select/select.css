@@ -4,7 +4,6 @@
 		justify-content: center;
 		align-items: center;
 		pointer-events: none;
-		z-index: 9999999;
 }
 
 .file-detail-text {
@@ -20,6 +19,7 @@
 .vite-plugin-wrap {
 		position: fixed;
 		pointer-events: none;
+		z-index: 1000;
 }
 
 .vite-plugin-select {
@@ -29,7 +29,6 @@
 		border-radius: 5px;
 		width: 100%;
 		height: 100%;
-		z-index: 9999999;
 		/*margin: 10px;*/
 		/*padding: 5px;*/
 		/*transform: translate(-5px, -5px);*/
