@@ -20,7 +20,7 @@
     "vite": "^2.9.9",
     "vite-plugin-hot-export": "^0.5.4",
     "vite-plugin-inspect": "^0.5.1",
-    "vite-plugin-react-inspector": "workspace:*",
+    "vite-plugin-react-find": "workspace:*",
     "vite-plugin-svgr": "^2.2.0"
   }
 }

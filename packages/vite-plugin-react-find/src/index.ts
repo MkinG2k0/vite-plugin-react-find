@@ -6,7 +6,7 @@ import { parseFilePath, parseJSXIdentifier } from './utils'
 import { launchEditor } from './launch-editor'
 function VitePluginReactInspector(): Plugin {
   return {
-    name: 'vite-plugin-react-inspector',
+    name: 'vite-plugin-react-find',
     enforce: 'pre',
     apply: 'serve',
     config: () => {
@@ -17,7 +17,7 @@ function VitePluginReactInspector(): Plugin {
       }
     },
     transform: (code, id) => {
-      const selfFileRegex = /vite-plugin-react-inspector\/src\/Toggle/
+      const selfFileRegex = /vite-plugin-react-find\/src\/Select/
       if ((id.endsWith('.tsx') || id.endsWith('.jsx')) && !selfFileRegex.test(id)) {
         const transformedCode = code
         const s = new MagicString(transformedCode)
@@ -81,7 +81,7 @@ function VitePluginReactInspector(): Plugin {
             injectTo: 'body',
             attrs: {
               type: 'module',
-              src: '/node_modules/vite-plugin-react-inspector/src/inject.jsx',
+              src: '/node_modules/vite-plugin-react-find/src/inject.jsx',
             },
           },
         ],

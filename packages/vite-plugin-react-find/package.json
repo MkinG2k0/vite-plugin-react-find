@@ -1,18 +1,18 @@
 {
   "name": "vite-plugin-react-find",
   "type": "module",
-  "version": "0.4.0",
+  "version": "0.4.2",
   "description": "",
-  "author": "sudongyuer",
+  "author": "MkinG2k0",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/sudongyuer",
-  "homepage": "https://github.com/sudongyuer/vite-plugin-react-inspector#readme",
-  "repository": "https://github.com/sudongyuer/vite-plugin-react-inspector",
-  "bugs": "https://github.com/sudongyuer/vite-plugin-react-inspector/issues",
+  "homepage": "https://github.com/MkinG2k0/vite-plugin-react-find#readme",
+  "repository": "https://github.com/MkinG2k0/vite-plugin-react-find",
+  "bugs": "https://github.com/MkinG2k0/vite-plugin-react-find/issues",
   "keywords": [
     "vite",
     "vite-plugin",
-    "vite-plugin-react-inspector"
+    "vite-plugin-react-inspector",
+    "vite-plugin-react-find"
   ],
   "exports": {
     ".": {

@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import './select.css'
 
-const keyCode = 'AltLeft'
+const keyCode = import.meta.env.VITE_REACT_EDITOR_ACTION || 'ControlLeft'
 
 function Select() {
   const [active, setActive] = useState(false)
   const [postion, setPotion] = useState({ x: 0, y: 0 })
-  const [fileDetail, setFileDetail] = useState({ filePath: '', line: 0, column: 0 })
+  const [fileDetail, setFileDetail] = useState({ filePath: '', fileName: '', line: 0, column: 0 })
   const { x, y } = postion
 
   const eventCallBack = useCallback((e) => {
@@ -50,7 +50,8 @@ function Select() {
 
   useEffect(() => {
     const onKeyDown = (e) => {
-      if (e.code === keyCode && !active) setActive(true)
+      if (e.code === keyCode && !active)
+        setActive(true)
     }
 
     const onKeyUp = (e) => {

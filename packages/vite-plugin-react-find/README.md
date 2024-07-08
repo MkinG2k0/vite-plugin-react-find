@@ -1,24 +1,9 @@
-
-<p align="center">
-<a href="https://github.com/sudongyuer/vite-plugin-vue-inspector"><img src="https://git.poker/sudongyuer/image-bed/blob/master/vite-plugin-react-inspector.png?raw=true" width='200'/></a>
-</p>
-
-<p align="center">
-  <a href="https://www.npmjs.com/package/vite-plugin-react-inspector" target="_blank" rel="noopener noreferrer"><img src="https://badgen.net/npm/v/vite-plugin-react-inspector" alt="NPM Version" /></a>
-  <a href="https://www.npmjs.com/package/vite-plugin-react-inspector" target="_blank" rel="noopener noreferrer"><img src="https://badgen.net/npm/dt/vite-plugin-react-inspector" alt="NPM Downloads" /></a>
-  <a href="https://github.com/sudongyuer/vite-plugin-react-inspector/blob/master/LICENSE" target="_blank" rel="noopener noreferrer"><img src="https://badgen.net/github/license/sudongyuer/vite-plugin-react-inspector" alt="License" /></a>
-</p>
-
-<p align="center">
-<a href="https://stackblitz.com/edit/vitejs-vite-1mazom?file=src/App.tsx"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
-</p>
-
-## 👀 Why 
+## 👀 Why
 When developing a React app, you have a lot of components in your app. Sometimes you may forget where the code is located that you want to edit. Then you need this plugin to help you find the code, just click the dom in the browser and this plugin can help you to open the editor and find the code.
 
 
 ## 📖 Introduction
-This vite plugin allows users to jump to local IDE code directly from browser React component by just a simple click, which is similar to Chrome inspector but more advanced.
+This website plugin allows users to navigate to the local IDE code directly from the React browser component with the "Controleft" key pressed (by default) and a mouse click, which is similar to Chrome inspector, but more advanced.
 
 ## 🌈 Features
 
@@ -27,22 +12,17 @@ This vite plugin allows users to jump to local IDE code directly from browser Re
 - Support react 18
 - All features out of box just need add this plugin in vite.config.ts
 
-
-<p align="center">
-<img src="https://git.poker/sudongyuer/image-bed/blob/master/20220724/vite-plugin-react-inspector.gif?raw=true" alt="vite-plugin-vue-inspector">
-</p>
-
 ## 📦 Installation
 
 ```bash
 # pnpm 
-pnpm add vite-plugin-react-inspector -D
+pnpm add vite-plugin-react-find -D
 
 # yarn
-yarn add vite-plugin-react-inspector -D
+yarn add vite-plugin-react-find -D
 
 # npm
-npm install vite-plugin-react-inspector -D
+npm install vite-plugin-react-find -D
 ```
 
 ## 🦄 Usage
@@ -54,20 +34,21 @@ npm install vite-plugin-react-inspector -D
 
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import ReactInspector from 'vite-plugin-react-inspector'
+import reactFind from 'vite-plugin-react-find'
 
 export default defineConfig({
   plugins: [
-    ReactInspector(),
+    reactFind(),
     react(),
   ],
 })
 ```
 
-### Example
+launch your project, and click the "Controleft" button (by default), then click on the left mouse button to open the component in the code
 
-- [React17](https://github.com/sudongyuer/vite-plugin-react-inspector/tree/master/packages/project-react-17)
-- [React18](https://github.com/sudongyuer/vite-plugin-react-inspector/tree/master/packages/project-react-18)
+```dotenv
+VITE_REACT_EDITOR_ACTION=ControlLeft # any key code 
+```
 
 ## 🔌  Configuration IDE / Editor
 
@@ -79,18 +60,17 @@ For example, if you want it always open VSCode when inspection clicked, set `exp
 ### VSCode
 
 - install VSCode command line tools, [see the official docs](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
-  ![install-vscode-cli](https://git.poker/sudongyuer/image-bed/blob/master/vscode-setup.png?raw=true)
 
-- set env to shell, like `.bashrc` or `.zshrc`  
+- set env to shell, like `.bashrc` or `.zshrc`
 
   ```bash
   export REACT_EDITOR=code
   ```
 
 
-### WebStorm  
+### WebStorm
 
-- just set env with an absolute path to shell, like `.bashrc` or `.zshrc` (only MacOS)  
+- just set env with an absolute path to shell, like `.bashrc` or `.zshrc` (only MacOS)
 
   ```bash
   export REACT_EDITOR='/Applications/WebStorm.app/Contents/MacOS/webstorm'
@@ -100,7 +80,7 @@ For example, if you want it always open VSCode when inspection clicked, set `exp
 
 - install WebStorm command line tools
 
-- then set env to shell, like `.bashrc` or `.zshrc`  
+- then set env to shell, like `.bashrc` or `.zshrc`
 
   ```bash
   export REACT_EDITOR=webstorm
@@ -115,20 +95,5 @@ Yes! you can also use vim if you want, just set env to shell
 export REACT_EDITOR=vim
 ```
 
-## 🌸 Credits
-
-This project is inspired by [vite-plugin-vue-inspector](https://github.com/webfansplz/vite-plugin-vue-inspector) .
-
-Partially implementation is inspired by [vite-plugin-svelte-inspector](https://github.com/sveltejs/vite-plugin-svelte/tree/main/packages/vite-plugin-svelte/src/ui/inspector) .
-
-## 👦 Author
-
-sudongyuer email:976499226@qq.com
-
-## ❤️ Thanks Contribution
-
-- [geekris1](https://github.com/geekris1)
-
-## 📄 License
-
-[MIT](./LICENSE) License © 2022 [SuDongYu](https://github.com/sudongyuer)
+## 🌸
+implemented on the basis of [vite-plugin-react-inspector](https://www.npmjs.com/package/vite-plugin-react-inspector)
