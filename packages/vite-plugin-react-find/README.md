@@ -46,10 +46,10 @@ export default defineConfig({
 })
 ```
 
-launch your project, and click the "AltLeft" button (by default), then click on the left mouse button to open the component in the code
+launch your project, and click the "AltLeft" button (AltLeft by default), then click on the left mouse button to open the component in the code
 
 ```dotenv
-VITE_REACT_EDITOR_ACTION=ControlLeft # any key code 
+VITE_REACT_EDITOR_ACTION=AltLeft # any key code 
 ```
 
 ## 🔌  Configuration IDE / Editor
