@@ -3,7 +3,7 @@ When developing a React app, you have a lot of components in your app. Sometimes
 
 
 ## 📖 Introduction
-This website plugin allows users to navigate to the local IDE code directly from the React browser component with the "Controleft" key pressed (by default) and a mouse click, which is similar to Chrome inspector, but more advanced.
+This website plugin allows users to navigate to the local IDE code directly from the React browser component with the "AltLeft" key pressed (by default) and a mouse click, which is similar to Chrome inspector, but more advanced.
 
 ![](./docs/react-plugin-find.gif)
 
@@ -46,7 +46,7 @@ export default defineConfig({
 })
 ```
 
-launch your project, and click the "Controleft" button (by default), then click on the left mouse button to open the component in the code
+launch your project, and click the "AltLeft" button (by default), then click on the left mouse button to open the component in the code
 
 ```dotenv
 VITE_REACT_EDITOR_ACTION=ControlLeft # any key code 
