@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import './select.css'
 
-const keyCode = import.meta.env.VITE_REACT_EDITOR_ACTION || 'ControlLeft'
+const keyCode = import.meta.env.VITE_REACT_EDITOR_ACTION || 'AltLeft'
 
 function Select() {
   const [active, setActive] = useState(false)
