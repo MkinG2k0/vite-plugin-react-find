@@ -1,4 +1,4 @@
-import type { JSXIdentifier, JSXMemberExpression } from '@babel/types'
+import type { JSXIdentifier, JSXMemberExpression, TSTypeParameterInstantiation } from '@babel/types'
 
 export function parseJSXIdentifier(name: JSXIdentifier | JSXMemberExpression) {
   if (name.type === 'JSXIdentifier')

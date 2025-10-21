@@ -9,7 +9,10 @@ function App() {
       <React.Fragment>
 
         <header className="App-header">
-          <button onClick={() => { console.log('click') }}>butttt</button>
+          <button onClick={() => {
+					  console.log('click')
+          }}>butttt
+          </button>
           <p>vite-plugin-react-inspector</p>
           <p>vite-plugin-react-inspector</p>
           <p>vite-plugin-react-inspector</p>
@@ -17,7 +20,7 @@ function App() {
           <img
             style={{ width: '150px' }}
             src={''}
-          />
+					/>
           <p>vite-plugin-react-inspector</p>
           <p>
             GitHub 👉 sudongyuer 🐟
@@ -26,7 +29,8 @@ function App() {
           <Hello/>
           <Hello/>
           <ReactInspector/>
-          <a href="https://github.com/sudongyuer/vite-plugin-react-inspector" target="_blank" rel="noreferrer">https://github.com/sudongyuer/vite-plugin-react-inspector</a>
+          <a href="https://github.com/sudongyuer/vite-plugin-react-inspector" target="_blank"
+            rel="noreferrer">https://github.com/sudongyuer/vite-plugin-react-inspector</a>
           <ReactInspector/>
           <ReactInspector/>
           <ReactInspector/>
