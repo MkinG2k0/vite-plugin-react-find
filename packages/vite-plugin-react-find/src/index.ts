@@ -44,8 +44,7 @@ function VitePluginReactInspector(): Plugin {
 
               const { start } = node
               const { column, line } = node?.loc?.start as any
-              const typeIndex = node.openingElement.typeParameters?.start ? node.openingElement.typeParameters.start - start - 1 : 1
-
+              const typeIndex = node.openingElement.typeParameters?.start ? node.openingElement.typeParameters.end - node.openingElement.typeParameters.start + 1 : 1
               const toInsertPosition = start + parseJSXIdentifier(node.openingElement.name as any).length + typeIndex
 
               const content = ` data-react-inspector="${id}:${line}:${column}"`

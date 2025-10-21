@@ -9,6 +9,14 @@ type SomeType = {
 	num: number
 }
 
+const Gen = <T extends Record<string, string>>(props: T) => {
+	return <div>gen</div>
+}
+
+const GenericSomeBigNameReactComponents = <T extends Record<string, string>>(props: T) => {
+	return <div>gen</div>
+}
+
 function App() {
 	const [count, setCount] = useState(0)
 
@@ -35,6 +43,7 @@ function App() {
 				Click on the Vite and React logos to learn more
 			</p>
 
+			<GenericComp<{ bbb: string, asdsa: boolean }> bbb={'asdsadasdsad'}/>
 			<GenericComp<SomeType> />
 			<GenericComp<SomeType> >
 				<div>Content</div>
@@ -46,6 +55,24 @@ function App() {
 			</GenericComp>
 			<GenericComp<SomeType> >
 			</GenericComp>
+
+			<Gen<{ bbb: string, asdsa: boolean }> bbb={'asdsadasdsad'}/>
+			<Gen<SomeType> />
+			<Gen<SomeType> >
+				<div>Content</div>
+				<div>Content 2</div>
+			</Gen>
+			<Gen<SomeType> >
+			</Gen>
+
+			<GenericSomeBigNameReactComponents<{ bbb: string, asdsa: boolean }> bbb={'asdsadasdsad'}/>
+			<GenericSomeBigNameReactComponents<SomeType> />
+			<GenericSomeBigNameReactComponents<SomeType> >
+				<div>Content</div>
+				<div>Content 2</div>
+			</GenericSomeBigNameReactComponents>
+			<GenericSomeBigNameReactComponents<SomeType> >
+			</GenericSomeBigNameReactComponents>
 		</>
 	)
 }
