@@ -1,8 +1,9 @@
 ## 👀 Why
+
 When developing a React app, you have a lot of components in your app. Sometimes you may forget where the code is located that you want to edit. Then you need this plugin to help you find the code, just click the dom in the browser and this plugin can help you to open the editor and find the code.
 
-
 ## 📖 Introduction
+
 This website plugin allows users to navigate to the local IDE code directly from the React browser component with the "AltLeft" key pressed (by default) and a mouse click, which is similar to Chrome inspector, but more advanced.
 
 ![](./docs/react-plugin-find.gif)
@@ -12,6 +13,7 @@ This website plugin allows users to navigate to the local IDE code directly from
 - Support react 16
 - Support react 17
 - Support react 18
+- Support react 19
 - All features out of box just need add this plugin in vite.config.ts
 
 ## 📦 Installation
@@ -58,17 +60,14 @@ It uses an **environment variable** named **`REACT_EDITOR`** to specify an IDE a
 
 For example, if you want it always open VSCode when inspection clicked, set `export REACT_EDITOR=code` in your shell.
 
-
 ### VSCode
 
 - install VSCode command line tools, [see the official docs](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
-
 - set env to shell, like `.bashrc` or `.zshrc`
 
   ```bash
   export REACT_EDITOR=code
   ```
-
 
 ### WebStorm
 
@@ -81,13 +80,11 @@ For example, if you want it always open VSCode when inspection clicked, set `exp
 **OR**
 
 - install WebStorm command line tools
-
 - then set env to shell, like `.bashrc` or `.zshrc`
 
   ```bash
   export REACT_EDITOR=webstorm
   ```
-
 
 ### Vim
 
@@ -98,4 +95,5 @@ export REACT_EDITOR=vim
 ```
 
 ## 🌸
+
 implemented on the basis of [vite-plugin-react-inspector](https://www.npmjs.com/package/vite-plugin-react-inspector)
