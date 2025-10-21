@@ -1,5 +1,19 @@
 # vite-plugin-react-inspector
 
+### 0.5.0
+
+* update view on mouse move
+
+## 0.4.0
+
+* added support react 19
+* added support react component generic ()
+* update libs
+
+### 0.3.5
+
+* refactor poject
+
 ## 0.3.3
 
 ### Patch Changes
