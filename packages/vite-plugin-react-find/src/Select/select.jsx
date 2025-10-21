@@ -6,7 +6,7 @@ const keyCode = import.meta.env.VITE_REACT_EDITOR_ACTION || 'AltLeft'
 function Select() {
   const [active, setActive] = useState(false)
   const [postion, setPotion] = useState({ x: 0, y: 0 })
-  const [fileDetail, setFileDetail] = useState({ filePath: '', fileName: '', line: 0, column: 0 })
+  const [fileDetail, setFileDetail] = useState({ filePath: '', fileName: '', line: 0, column: 0, files: [] })
   const { x, y } = postion
 
   const eventCallBack = useCallback((e) => {
@@ -22,6 +22,20 @@ function Select() {
     e.preventDefault()
 
     const file = e.target.getAttribute('data-react-inspector')
+    const files = []
+
+    const getChild = (node) => {
+      files.push(node.getAttribute('data-react-inspector'))
+      if (node.children && node.children.length) {
+        [...node.children].forEach((child) => {
+          getChild(child)
+        })
+      }
+    }
+
+    getChild(e.target)
+
+    const formatFiles = new Set(...files.slice(1))
 
     if (file) {
       const [rootPath, filePath, line, column] = file.split(':')
@@ -29,7 +43,7 @@ function Select() {
 
       const rect = e.target.getBoundingClientRect()
 
-      setFileDetail({ filePath: `${rootPath}:${filePath}`, line, column, fileName })
+      setFileDetail({ filePath: `${rootPath}:${filePath}`, line, column, fileName, files: formatFiles.values() })
       setPotion(
         { x: rect.x, y: rect.y, width: e.target.offsetWidth, height: e.target.offsetHeight })
     }
@@ -69,6 +83,14 @@ function Select() {
     }
   }, [active, setActive])
 
+  const formatFolder = (path) => {
+    const split = path.split('/')
+    split[split.length - 1] = split[split.length - 1].split('.')[0]
+    return split.slice(split.length - 2, split.length).join('/')
+  }
+
+  const name = fileDetail.fileName === 'index' ? formatFolder(fileDetail.filePath) : fileDetail.fileName
+
   return (<div className={'vite-plugin-wrap'}>
     {active && <>
       <div className="file-detail" style={{
@@ -77,13 +99,23 @@ function Select() {
 			  transform: `translate(0%, ${y > 50 ? '-140%' : '150%'} )`,
 			  width: `${postion.width}px`,
       }}>
+        {/*      <div> */}
+        {/*        { */}
+        {/*					fileDetail.files.map((value) => { */}
+        {/*					  return <div> */}
+        {/* {formatFolder(value)} */}
+        {/*						</div> */}
+        {/*					}) */}
+        {/*				} */}
+        {/*      </div> */}
+
         <div
           className={'file-detail-text'}
           style={{
 					  display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', gap: '5px',
           }}
 				>
-          {fileDetail.fileName}
+          {name}
         </div>
       </div>
       <div className={'vite-plugin-select'} style={{

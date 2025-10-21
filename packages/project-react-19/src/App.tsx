@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { GenericComp } from './GenericComp.tsx'
+import { Src } from './index.tsx'
 
 type SomeType = {
 	value: string
@@ -42,7 +43,7 @@ function App() {
 			<p className="read-the-docs">
 				Click on the Vite and React logos to learn more
 			</p>
-
+			<Src/>
 			<GenericComp<{ bbb: string, asdsa: boolean }> bbb={'asdsadasdsad'}/>
 			<GenericComp<SomeType> />
 			<GenericComp<SomeType> >
